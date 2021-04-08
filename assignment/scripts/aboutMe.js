@@ -15,7 +15,9 @@ console.log(fullName);
 let luckyNumber = 8;
 
 // 6 - Console log this sentence, adding in the variables you created above: 'My name is (full name), and I think (lucky number) is a winner!'. Refer back to the videos if you need help with this one.
-console.log("My name is " + fullName + ", and I think " + luckyNumber + " is a winner!")
+console.log("My name is " + fullName + ", and I think " + luckyNumber + " is a winner!  Done via Concatenation.")
+// Or if you want to do it with Interpolation instead of Concatenation, for readability purposes:
+console.log(`My name is ${fullName}, and I think ${luckyNumber} is a winner!  Done via Interpolation.`)
 
 // 7 - Create a variable named `adventurous` and set it to a boolean value (true or false)
 let adventurous = true;
@@ -43,7 +45,7 @@ if (adventurous = true) {
 }
 
 // 14 - Create a compound conditional: if luckyNumber is 2 and adventurous is true, console log "Roll the dice!"
-if ((luckyNumber == 2) && (adventurous == true)) {
+if ((luckyNumber === 2) && (adventurous === true)) {
   console.log("Roll the dice!");
 } else { // I just wanted to add something to happen, since my lucky number is not 2. :)
   console.log("No luck today, try again tomorrow!");
@@ -62,28 +64,28 @@ if (pets < allowedPets) {
 
 // 16 - Make a variable called `mostPets` and a conditional that correctly checks the `pets` and `friendsPets` variables, and assigns the highest value to `mostPets`. There's several possibilities -- be sure to think through all the scenarios. console.log `mostPets` after the conditional has run.
 let mostPets = 0;
-if (pets < friendsPets) { // This will be the line that prints.
-  console.log("The most pets between us all is friendsPets at " + (mostPets + friendsPets) + " total.");
+if (pets < friendsPets) {
+  console.log("The most pets between us is my friend's pets at " + (mostPets + friendsPets) + " total.  Done via If/Else.");
 } else if (friendsPets < pets) {
-  console.log("The most pets between us all is pets at " + (mostPets + pets) + " total.");
-} else if (friendsPets == pets) {
-  console.log("We have the same number of pets between us, at " + ((mostPets + pets) / 2)) + " pets per group, so " + (mostPets + pets) + " pets total.";
+  console.log("The most pets between us is my pets at " + (mostPets + pets) + " total.  Done via If/Else.");
+} else if (friendsPets === pets) {
+  console.log("We have the same number of pets between us, at " + ((friendsPets + pets) / 2) + " pets per group, so " + (friendsPets + pets) + " pets total.  Done via If/Else.");
 } // I added some String concatenation to make sure the right variable is being logged to the console, and make it easier to understand the statement in general.
 
 // 17 - Rewrite question 16 with a `switch` statement. You'll need to do research!
-
-switch (pets) {
-  case (pets < friendsPets):
-    console.log("The most pets between us all is friendsPets at " + (mostPets + friendsPets) + " total.");
+switch (true) {
+  case (friendsPets > pets):
+    console.log("The most pets between us is my friend's pets at " + (mostPets + friendsPets) + " total.  Done via Switch.");
     break;
   case (friendsPets < pets):
-    console.log("The most pets between us all is pets at " + (mostPets + pets) + " total.");
+    console.log("The most pets between us is my pets at " + (mostPets + pets) + " total.  Done via Switch.");
     break;
-  case (friendsPets == pets):
-    console.log("We have the same number of pets between us, at " + ((mostPets + pets) / 2)) + " pets per group, so " + (mostPets + pets) + " pets total.";
+  case (friendsPets === pets):
+    console.log("We have the same number of pets between us, at " + ((friendsPets + pets) / 2) + " pets per group, so " + (friendsPets + pets) + " pets total.  Done via Switch.")
   default:
-    "I love pets!"
-} // I think re-writing Question 16 as a switch is a bad setup, as not everyone will have pets.  It'll literally become a two switch statement, in that if it's 0, it's the same, and if it's anything else it's more.
+    console.log("Unexpected error.");
+    break;
+} // Same thing, added some String concatenation to be able to check the logic.  
 
 // 18 -- Rewrite question 13 with a `ternary` operator. You'll need to do research!
 console.log(adventurous ? "Adventures are great!" : "How about we stay home?");
