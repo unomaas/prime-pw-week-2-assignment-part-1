@@ -83,9 +83,9 @@ switch (true) {
   case (friendsPets === pets):
     console.log("We have the same number of pets between us, at " + ((friendsPets + pets) / 2) + " pets per group, so " + (friendsPets + pets) + " pets total.  Done via Switch.")
   default:
-    console.log("Unexpected error.");
+    console.log("Unexpected error, better check my code block.");
     break;
-} // Same thing, added some String concatenation to be able to check the logic.  
+} // Same thing, added some String concatenation to be able to check the logic.
 
 // 18 -- Rewrite question 13 with a `ternary` operator. You'll need to do research!
 console.log(adventurous ? "Adventures are great!" : "How about we stay home?");
